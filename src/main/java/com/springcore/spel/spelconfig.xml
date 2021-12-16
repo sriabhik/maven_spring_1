@@ -10,8 +10,7 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 	
-	<!-- this is bean -->
-	<bean class = "com.springcore.Student" name = "Student1" p:studentId = "132" p:studentName = "Abhishek Srivastava" p:studentAddress = "Chapra"/>
-		
+	<context:component-scan base-package = "com.springcore.spel"/>
+	
  
 </beans>

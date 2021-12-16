@@ -11,7 +11,29 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<!-- this is bean -->
-	<bean class = "com.springcore.Student" name = "Student1" p:studentId = "132" p:studentName = "Abhishek Srivastava" p:studentAddress = "Chapra"/>
+	<bean name = "emp1" class = "com.springcore.collections.Emp">
+		<property name = "name" value = "Kinu" />
+		<property name = "phone">
+			<list>
+				<value>7631351904</value>
+				<value>7631946875</value>
+			</list>
+		</property>
 		
+		<property name = "address">
+			<set>
+				<value>sadarHospital</value>
+				<value>chapraTelpa</value>
+			</set>
+		</property>
+		
+		<property name = "courses">
+			<map>
+				<entry key = "Btech" value = "4years"/>
+				<entry key = "BA" value = "3years" />
+			</map>
+		</property>
+	
+	</bean>
  
 </beans>

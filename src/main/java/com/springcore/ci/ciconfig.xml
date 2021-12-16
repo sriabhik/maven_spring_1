@@ -11,7 +11,16 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<!-- this is bean -->
-	<bean class = "com.springcore.Student" name = "Student1" p:studentId = "132" p:studentName = "Abhishek Srivastava" p:studentAddress = "Chapra"/>
-		
+	
+	<!-- this bean for certi and to make a refernce -->
+	<bean class = "com.springcore.ci.Certi" name = "cer">
+		<constructor-arg value = "Android using Kotlin"/>	
+	</bean>
+	
+	<bean class = "com.springcore.ci.Person" name = "person">
+		<constructor-arg value = "Abhishek"/>
+		<constructor-arg value = "132" type = "int"/>
+		<constructor-arg ref = "cer" />
+	</bean>
  
 </beans>
